@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color: #ff6600;
+    --secondary-color: #ffc600;
+    --font-color: rgba(22, 28, 45, 0.7);
+    --heading-color: #232121;
+}
+html, body{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    background-color: #f7f7f7;
+}
+.title h6{
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--primary-color);
+}
+.title h3{
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 48px;
+    color: var(--heading-color);
+}
+body{
+    background-color: white;
+}
