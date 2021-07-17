@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,8 +30,53 @@
     <!-- Reponsive CSS -->
     <link rel="stylesheet" href="./css/reponsive.css">
 </head>
+
 <body>
-    <header></header>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav__brand">
+                    Dinner
+                </div>
+                <div class="navbar__right">
+                    <div class="nav__search">
+                        <input type="text" name="search" placeholder="Search here..">
+                        <a href=""><i class="fas fa-search"></i></a>
+                    </div>
+                    <div class="nav__modeChange">
+                        <button><i class="las la-moon"></i></button>
+                        <button><i class="las la-sun d-none"></i></button>
+                    </div>
+                    <button class="nav__menuBtn" onclick="openNav()">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+            <div class="banner">
+                <h3>The Only Thing We Love More Than Food Is You!</h3>
+                <p>Lorem ipsum dolor sit amet consectetur ipsum elit. Qui eligendi vitae sit.Ea ipsum sed consequuntur
+                    illum facere.</p>
+                <button>Read More <span><i class="fa fa-angle-right"></i></span></button>
+            </div>
+        </div>
+        <div id="navbar_menuContent" class="d-none animate__animated animate__zoomIn animate__faster">
+            <!-- animate__animated animate__fadeIn animate__faster -->
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">404</a></li>
+                <li><a href="#">Landing page</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Shot Codes</a></li>
+                <li><a href="#">Email</a></li>
+            </ul>
+            <button class="navbar__closeBtn" onclick="closeNav()">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+    </header>
     <section class="about"></section>
     <section class="book"></section>
     <section class="category"></section>
@@ -50,5 +96,17 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
+
+    <script>
+        function openNav() {
+            var navMenu = document.getElementById("navbar_menuContent");
+            navMenu.classList.remove("d-none");
+            // navMenu.style.opacity = 1;
+        }
+        function closeNav() {
+            document.getElementById("navbar_menuContent").classList.add("d-none");
+        }
+    </script>
 </body>
+
 </html>

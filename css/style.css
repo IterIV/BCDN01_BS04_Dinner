@@ -30,3 +30,152 @@ html, body{
 body{
     background-color: white;
 }
+
+/* Header */
+header{
+    position: relative;
+    min-height: 700px;
+    background-image: linear-gradient(to right, #ff6600, hsl(30deg 100% 1% / 20%)), url(../img/banner1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+}
+/* Header Navbar */
+header nav{
+    padding: 40px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .nav__brand{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+}
+.navbar__right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav__search{
+    position: relative;
+}
+.nav__search input{
+    height: 45px;
+    color: var(--font-color);
+    padding: 10px 50px 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.nav__search a{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--font-color);
+}
+
+.nav__modeChange a{
+    text-decoration: none;
+    color: white;
+    font-size: 34px;
+    margin: 0px 10px;
+}
+.nav__modeChange button{
+    font-size: 30px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    margin: 0px 10px;
+}
+.navbar__right .nav__menuBtn{
+    font-size: 30px;
+    color: white;
+    border: none;
+    background-color: transparent;
+}
+
+#navbar_menuContent{
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background: rgb(6 3 0 / 77%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 120;
+}
+.navbar__closeBtn{
+    font-size: 14px;
+    color: white;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    height: 40px;
+    width: 40px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+button.navbar__closeBtn:focus{
+    outline: 5px auto;
+}
+#navbar_menuContent li{
+    list-style: none;
+    padding: 10px 0px;
+    text-align: center;
+}
+#navbar_menuContent li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: all .4s;
+}
+#navbar_menuContent li:hover a{
+    color: var(--primary-color);
+}
+/* Header banner */
+.banner{
+    max-width: 600px;
+    margin-top: 100px
+}
+.banner h3{
+    font-size: 54px;
+    line-height: 64px;
+    font-weight: 600;
+    color: white;
+}
+.banner p{
+    color: white;
+    margin: 24px 0 0 0;
+    padding-right: 48px;
+}
+.banner button{
+    padding: 12px 42px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    margin-top: 48px;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all .5s;
+}
+.banner button span{
+    font-size: 18px;
+    margin-left: 10px;
+}
+.banner button:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
