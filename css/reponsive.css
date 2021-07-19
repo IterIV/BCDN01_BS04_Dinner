@@ -1,3 +1,8 @@
+@media screen and (max-width: 1080px) {
+    .soup__content__topRight a{
+        font-size: 20px;
+    }
+}
 @media screen and (max-width: 992px) {
     .banner h3{
         font-size: 44px;
@@ -20,6 +25,10 @@
 @media screen and (max-width:600px) {
     .nav__search{
         display: none;
+    }
+    .soup__content>p{
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 @media screen and (max-width:576px) {
