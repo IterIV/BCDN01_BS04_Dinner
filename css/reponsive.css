@@ -11,6 +11,14 @@
     .banner p{
         padding-right: 0;
     }
+    .about h3{
+       font-size: 32px;
+       line-height: 40px;    
+    }
+    .about p{
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
 }
 @media screen and (max-width:800px) {
     header{
@@ -60,4 +68,9 @@
     .banner button{
         margin-top: 20px;
     }
+}
+
+/* reponsive about */
+@media screen and (max-width:720px) {
+    
 }
