@@ -34,7 +34,26 @@ p{
     line-height: 48px;
     color: var(--heading-color);
 }
-
+button{
+    padding: 12px 42px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-weight: 700;
+    margin-top: 48px;
+    line-height: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all .5s;
+}
+button span{
+    font-size: 18px;
+    margin-left: 10px;
+}
+button:hover{
+    background-color: white;
+    color: var(--primary-color);
+}
 /* Header */
 header{
     position: relative;
@@ -85,16 +104,12 @@ header .nav__brand{
 
 .nav__modeChange a{
     text-decoration: none;
+    margin: 0px 10px;
+    background-color: transparent;
+}
+.nav__modeChange i{
     color: white;
     font-size: 34px;
-    margin: 0px 10px;
-}
-.nav__modeChange button{
-    font-size: 30px;
-    color: white;
-    border: none;
-    background-color: transparent;
-    margin: 0px 10px;
 }
 .navbar__right .nav__menuBtn{
     font-size: 30px;
@@ -116,20 +131,22 @@ header .nav__brand{
     z-index: 120;
 }
 .navbar__closeBtn{
-    font-size: 14px;
-    color: white;
+   
     border: none;
     background-color: transparent;
     position: absolute;
     right: 30px;
     top: 30px;
-    height: 40px;
-    width: 40px;
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-button.navbar__closeBtn:focus{
-    outline: 5px auto;
+.navbar__closeBtn i{
+    font-size: 14px;
+    color: white;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
 }
 #navbar_menuContent li{
     list-style: none;
@@ -162,26 +179,6 @@ button.navbar__closeBtn:focus{
     color: white;
     margin: 24px 0 0 0;
     padding-right: 48px;
-}
-.banner button{
-    padding: 12px 42px;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
-    color: white;
-    font-weight: 700;
-    margin-top: 48px;
-    line-height: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    transition: all .5s;
-}
-.banner button span{
-    font-size: 18px;
-    margin-left: 10px;
-}
-.banner button:hover{
-    background-color: white;
-    color: var(--primary-color);
 }
 /* About */
 
@@ -234,3 +231,80 @@ button.navbar__closeBtn:focus{
     margin-top: 16px;
     font-size: 18px;
 }
+/* Delicious */
+.delicious{
+    background-image: url(../img/banner2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
+.delicious__overlay{
+    position: absolute;
+    left:0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.delicious__content{
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+.delicious h3{
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 55px;
+    color: white;
+}
+.delicious__button button:last-of-type{
+    background-color: var(--primary-color);
+    border: 2px solid transparent;
+    color: white;
+    transition: all .3s;
+}
+.delicious__button button:last-of-type:hover{
+    opacity: 0.8;
+}
+/* stats */
+.stats{
+    text-align: center;
+    margin-top: -70px;
+}
+.stats__item{
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
+    padding: 40px 20px;
+    transition: all .4s;
+}
+.stats__item:hover{
+    transform: translateY(-10px);
+    box-shadow: rgb(46 41 51 / 8%) 0px 2px 4px, rgb(71 63 79 / 16%) 0px 5px 10px;
+}
+.stats__item i{
+    height: 68px;
+    width: 68px;
+    line-height: 68px;
+    font-size: 26px;
+    text-align: center;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.stats__item h4{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 42px;
+    font-weight: 600;
+}
+.stats__item p{
+    font-size: 18px;
+    font-weight: 600;
+}
+/* Blog */
+
+/* Say */
+
+/* Footer */
