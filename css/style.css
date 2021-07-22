@@ -104,16 +104,12 @@ header .nav__brand{
 
 .nav__modeChange a{
     text-decoration: none;
+    margin: 0px 10px;
+    background-color: transparent;
+}
+.nav__modeChange i{
     color: white;
     font-size: 34px;
-    margin: 0px 10px;
-}
-.nav__modeChange button{
-    font-size: 30px;
-    color: white;
-    border: none;
-    background-color: transparent;
-    margin: 0px 10px;
 }
 .navbar__right .nav__menuBtn{
     font-size: 30px;
@@ -135,20 +131,22 @@ header .nav__brand{
     z-index: 120;
 }
 .navbar__closeBtn{
-    font-size: 14px;
-    color: white;
+   
     border: none;
     background-color: transparent;
     position: absolute;
     right: 30px;
     top: 30px;
-    height: 40px;
-    width: 40px;
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-button.navbar__closeBtn:focus{
-    outline: 5px auto;
+.navbar__closeBtn i{
+    font-size: 14px;
+    color: white;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
 }
 #navbar_menuContent li{
     list-style: none;
