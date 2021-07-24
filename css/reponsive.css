@@ -7,7 +7,10 @@
         line-height: 50px;
         max-width: 100%;
     }
-    
+    .title h3{
+        font-size: 32px;
+        line-height: 40px;    
+     }
 }
 @media screen and (max-width: 992px) {
     .banner h3{
@@ -21,13 +24,25 @@
         padding-top: 80px;
         margin-top: 0px;
     }
-    .about h3{
+    .title h3{
        font-size: 32px;
-       line-height: 40px;    
+       line-height: 40px;  
     }
     .about p{
         margin-bottom: 24px;
         margin-top: 24px;
+    }
+    .footer__listIcon{
+        text-align: center;
+    }
+    .footer__top h6{
+        font-size: 20px;
+    }
+    .footer__bottom p:first-of-type{
+        text-align: center;
+    }
+    .footer__bottom ul{
+        text-align: center;
     }
 }
 @media screen and (max-width:800px) {
@@ -56,6 +71,16 @@
     }
     .stats__item h4{
         font-size: 32px;
+    }
+    .title h3{
+        font-size: 30px;
+        line-height: 38px;    
+    }
+    .say__item h4{
+         font-size: 22px;
+     }
+    .say__item p:nth-of-type(2){
+        font-size: 16px;
     }
 }
 @media screen and (max-width:576px) {
@@ -87,9 +112,3 @@
     .banner button{
         margin-top: 20px;
     }
-}
-
-/* reponsive about */
-@media screen and (max-width:720px) {
-    
-}
