@@ -9,3 +9,12 @@ function closeNav() {
 
 // Counting up Number
 $('.counter').countUp();
+
+// Slick Carousel
+$(document).ready(function(){
+    $('.say__carousel').slick({
+        dots: true,
+        slidesToShow: 1,
+        arrows: false
+    });
+  });
