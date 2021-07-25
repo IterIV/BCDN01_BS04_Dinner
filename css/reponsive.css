@@ -40,7 +40,7 @@
     }
     .book__layout{
         height:200px;
-
+    }
     .footer__listIcon{
         text-align: center;
     }
@@ -130,3 +130,4 @@
     .banner button{
         margin-top: 20px;
     }
+}
