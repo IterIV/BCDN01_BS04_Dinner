@@ -2,6 +2,15 @@
     .soup__content__topRight a{
         font-size: 20px;
     }
+    .delicious h3{
+        font-size: 40px;
+        line-height: 50px;
+        max-width: 100%;
+    }
+    .title h3{
+        font-size: 32px;
+        line-height: 40px;    
+     }
 }
 @media screen and (max-width: 992px) {
     .banner h3{
@@ -11,9 +20,13 @@
     .banner p{
         padding-right: 0;
     }
-    .about h3{
+    .stats{
+        padding-top: 80px;
+        margin-top: 0px;
+    }
+    .title h3{
        font-size: 32px;
-       line-height: 40px;    
+       line-height: 40px;  
     }
     .about p{
         margin-bottom: 24px;
@@ -28,6 +41,17 @@
     .book__layout{
         height:200px;
 
+    .footer__listIcon{
+        text-align: center;
+    }
+    .footer__top h6{
+        font-size: 20px;
+    }
+    .footer__bottom p:first-of-type{
+        text-align: center;
+    }
+    .footer__bottom ul{
+        text-align: center;
     }
 }
 @media screen and (max-width:800px) {
@@ -40,6 +64,12 @@
         line-height: 50px;
     }
 }
+@media screen and (max-width:736px) {
+    .delicious h3{
+        font-size: 35px;
+        line-height: 40px;
+    }
+}
 @media screen and (max-width:600px) {
     .nav__search{
         display: none;
@@ -47,6 +77,19 @@
     .soup__content>p{
         font-size: 16px;
         line-height: 26px;
+    }
+    .stats__item h4{
+        font-size: 32px;
+    }
+    .title h3{
+        font-size: 30px;
+        line-height: 38px;    
+    }
+    .say__item h4{
+         font-size: 22px;
+     }
+    .say__item p:nth-of-type(2){
+        font-size: 16px;
     }
 }
 @media screen and (max-width:576px) {
@@ -87,9 +130,3 @@
     .banner button{
         margin-top: 20px;
     }
-}
-
-/* reponsive about */
-@media screen and (max-width:720px) {
-    
-}
