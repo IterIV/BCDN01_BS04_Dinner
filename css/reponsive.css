@@ -19,6 +19,16 @@
         margin-bottom: 24px;
         margin-top: 24px;
     }
+    .book h3{
+        font-size: 32px;
+    } 
+    .book__image{
+        height:200px;
+    }
+    .book__layout{
+        height:200px;
+
+    }
 }
 @media screen and (max-width:800px) {
     header{
@@ -42,6 +52,15 @@
 @media screen and (max-width:576px) {
     .banner button{
         margin-top: 24px;
+    }
+    .book h6{
+        font-size: 16px;
+    }
+    .book h3{
+        font-size: 30px;
+    }
+    .book p{
+        font-size: 16px;
     }
 }
 @media screen and (max-width:480px) {
