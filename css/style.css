@@ -31,6 +31,7 @@ p{
     line-height: 30px;
     color: var(--primary-color);
     font-family: 'Pacifico', cursive;
+    margin-bottom: 0;
 }
 .title h3{
     font-size: 38px;
