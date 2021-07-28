@@ -174,7 +174,7 @@ header .nav__brand{
     max-width: 600px;
     margin-top: 100px
 }
-.banner h3{
+header .banner h3{
     font-size: 54px;
     line-height: 64px;
     font-weight: 600;
@@ -217,7 +217,7 @@ header .nav__brand{
     left: 0;
     position: absolute;
 }
-.book__text p{
+.book .book__text p{
     color: #ffdfc9;
     font-size: 18px;
 }
@@ -242,7 +242,7 @@ header .nav__brand{
     line-height: 1.2;
     text-decoration: none;
 }
-.book__footer p{
+.book .book__footer p{
     font-size: 18px;
     line-height: 28px;
     color: #ffdfc9;
@@ -397,6 +397,7 @@ header .nav__brand{
     box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
     padding: 40px 20px;
     transition: all .4s;
+    height: 100%;
 }
 .stats__item:hover{
     transform: translateY(-10px);
@@ -603,11 +604,17 @@ body.darkMode .about{
 body.darkMode .title h3{
     color: var(--heading-color-dark);
 }
+body.darkMode .category{
+    background-color: #282828;
+}
 body.darkMode .soup{
     background-color: var(--background-dark);
 }
 body.darkMode .soup__content{
     border: 1px solid var(--border-color-dark);
+}
+body.darkMode .soup__content__topRight a{
+    color: #eee;
 }
 body.darkMode .stats{
     background-color: var(--background-dark);
