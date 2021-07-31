@@ -425,18 +425,18 @@ header .banner h3{
     border-radius: 5px;
 }
 .video__thumbnail .play-view{
+    position: absolute;
     left: 0;
-    right: 0;
-    top: -40px;
+    z-index: 4;
 }
 .video__playicon{
     display: inline-block;
     width: 80px;
     height: 80px;
+    line-height: 80px;
     font-size: 26px;
     padding-left: 2px;
     text-align: center;
-    line-height: 76px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     animation: ripple 1s linear infinite;
@@ -449,6 +449,20 @@ header .banner h3{
 .video__playicon:hover{
     background:var(--primary-color);
     color: #fff;
+    transform: scale(1.2);
+}
+.my-mfp-zoom-in{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform: scale(0.8);
+}
+.my-mfp-zoom-in.mfp-ready #small-dialog {
+    opacity: 1;
+    transform: scale(1);
+}
+.my-mfp-zoom-in.mfp-removing{
+    transform: scale(0.8);
+    opacity: 0;
 }
 @keyframes ripple {
     0% {

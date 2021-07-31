@@ -33,12 +33,14 @@ $('.counter').countUp();
 $(document).ready(function () {
   $(".popup-with-zoom-anim").magnificPopup({
     type: "inline",
-    fixedContentPos: false,
-    fixedBgPos: true,
-    overflowY: "auto",
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
+    closeOnBgClick: true, // Tắt popup khi click vào vùng tối
+    midClick: true, 
+    preloader: false, //Tắt thông báo trạng thái khi load popup
+    showCloseBtn: true, //Hiển thị nút close
+    closeBtnInside: true, //Nút close hiển thị trong popup
+    enableEscapeKey: true, //Sử dụng nút esc để tắt popup
+    fixedContentPos: false, //Tùy chọn thuộc tính position:absolute
+    fixedBgPos: true, 
     removalDelay: 300,
     mainClass: "my-mfp-zoom-in"
   });
