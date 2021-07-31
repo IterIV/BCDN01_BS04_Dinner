@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <!-- Google Font Pacifico -->
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- Font Segoe UI-->
+    <link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
     <!-- Icon Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
@@ -29,6 +31,9 @@
     <!-- Slick CSS -->
     <link rel="stylesheet" href="./css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
+
+    <!-- Magnific Popup core CSS file -->
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/style.css">
@@ -83,17 +88,17 @@
         </div>
     </header>
 
-    <section class="about">
-        <div class="container">
+    <section class="about py-5">
+        <div class="container py-md-5">
             <div class="about__content">
                 <div class="row">
-                    <div class="col-sm-12 col-lg-5">
+                    <div class="col-lg-5">
                         <div class="title">
                             <h6>About us</h6>
-                            <h3>We found our creative space that is open for you.</h3>
+                            <h3 class="mb-4">We found our creative space that is open for you.</h3>
                         </div>
                     </div>
-                    <div class="col-sm-12  col-lg-7">
+                    <div class="col-lg-7 pl-lg-5 mt-lg-0 mt-3">
 
                         <div class="about__text">
                             <p>
@@ -126,7 +131,7 @@
                     </div>
                     
                 </div>
-                <div class="book__right col-lg-6 px-lg-4 py-lg-3 py-4">
+                <div class="book__right col-lg-6 py-lg-3 py-4">
                     <div class="book__rightContent p-md-5 p-3">
                         <div class="title">
                             <h6 style="color: white;">More than 3000 Restaurants</h6>
@@ -417,7 +422,167 @@
         </div>
     </section>
 
-    <section class="blog"></section>
+    <section class="video py-5">
+        <div class="container py-lg-5">
+            <div class="video__thumbnail">
+                <a href="#small-dialog" class="play-icon popup-with-zoom-anim play-view text-center pl-3">
+                    <span class="video__playicon" aria-hidden="true">
+                        <span>
+                            <i class="fa fa-play"></i>
+                        </span>
+                    </span>   
+                </a>
+                
+                    <div id="small-dialog" class="w3ls_small_dialog wthree_pop mfp-hide">
+                      <div class="agileits_modal_body">
+                        <iframe title="vimeo-player" src="https://player.vimeo.com/video/305185528" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+                      </div>
+                    </div>
+                
+            </div>
+            
+            
+        </div>
+
+    </section>
+
+
+    <section class="blog py-5">
+        <div class="container py-md-5 py-2">
+            <div class="title text-center">
+                <h6>Latest Posts</h6>
+                <h3>Blog Posts</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 item mt-5">
+                    <div class="blog__item">
+                        <div class="blog__top">
+                            <div class="blog__image">
+                                <a href="#">
+                                    <img src="./img/banner1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog__icon">
+                                <a href="#">Recipe</a>
+                            <span class="blog__timer">
+                                <span><i class="las la-clock"></i></span>
+                                <span>10 Min Cook</span>
+                            </span>
+                                
+                            </div>
+                        </div>
+                        <div class="blog__bottom">
+                            <a class="blog__bottomHeader" href="#">The Best Cookie Recipes To Bake This Weekend</a>
+                            <p>Lorem ipsum dolor sit amet ipsum adipisicing elit. Qui eligendi vitae sit.</p>
+                            <div class="blog__footer mt-3">
+                                <div class="blog__info">
+                                    <a href="#">
+                                        <img src="./img/team1.jpg" alt="">
+                                    </a>
+                                    <a href="#">Rashed Kabir</a>
+                                </div>
+                                <div class="blog__readmore">
+                                    <span>
+                                        <a href="#">Read More</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 item mt-5">
+                    <div class="blog__item">
+                        <div class="blog__top">
+                            <div class="blog__image">
+                                <a href="#">
+                                    <img src="./img/banner3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog__icon">
+                                <a href="#">Soup</a>
+                            <span class="blog__timer">
+                                <span><i class="las la-clock"></i></span>
+                                <span>10 Min Cook</span>
+                            </span>
+                                
+                            </div>
+                        </div>
+                        <div class="blog__bottom">
+                            <a class="blog__bottomHeader" href="#">The Best Cookie Recipes To Bake This Weekend</a>
+                            <p>Lorem ipsum dolor sit amet ipsum adipisicing elit. Qui eligendi vitae sit.</p>
+                            <div class="blog__footer mt-3">
+                                <div class="blog__info">
+                                    <a href="#">
+                                        <img src="./img/team2.jpg" alt="">
+                                    </a>
+                                    <a href="#">Jannatul Ferdous</a>
+                                </div>
+                                <div class="blog__readmore">
+                                    <span>
+                                        <a href="#">Read More</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 item mt-5">
+                    <div class="blog__item">
+                        <div class="blog__top">
+                            <div class="blog__image">
+                                <a href="#">
+                                    <img src="./img/banner1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="blog__icon">
+                                <a href="#">Drinks</a>
+                            <span class="blog__timer">
+                                <span><i class="las la-clock"></i></span>
+                                <span>15 Min Cook</span>
+                            </span>
+                                
+                            </div>
+                        </div>
+                        <div class="blog__bottom">
+                            <a class="blog__bottomHeader" href="#">The Best Cookie Recipes To Bake This Weekend</a>
+                            <p>Lorem ipsum dolor sit amet ipsum adipisicing elit. Qui eligendi vitae sit.</p>
+                            <div class="blog__footer mt-3">
+                                <div class="blog__info">
+                                    <a href="#">
+                                        <img src="./img/team3.jpg" alt="">
+                                    </a>
+                                    <a href="#">Rashed Kabir</a>
+                                </div>
+                                <div class="blog__readmore">
+                                    <span>
+                                        <a href="#">Read More</a>
+                                    </span>
+                                    <span>
+                                        <i class="fa fa-chevron-right"></i>
+                                    </span>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </section>
 
     <section class="say py-5">
         <div class="container text-center py-5">
@@ -640,6 +805,9 @@
         crossorigin="anonymous"></script>
     <!-- Slick JS -->
     <script src="./js/slick.js"></script>
+
+    <!-- Magnific Popup core JS file -->
+    <script src="magnific-popup/jquery.magnific-popup.js"></script>
 
     <!-- Main JS -->
     <script src="./js/main.js"></script>

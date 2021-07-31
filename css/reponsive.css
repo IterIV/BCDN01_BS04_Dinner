@@ -28,10 +28,6 @@
        font-size: 32px;
        line-height: 40px;  
     }
-    .about p{
-        margin-bottom: 24px;
-        margin-top: 24px;
-    }
     .book h3{
         font-size: 32px;
     } 
@@ -69,10 +65,20 @@
         font-size: 35px;
         line-height: 40px;
     }
+    .blog__bottomHeader{
+        font-size: 20px;
+    }
 }
 @media screen and (max-width:600px) {
     .nav__search{
         display: none;
+    }
+    .about .title h6{
+        font-size: 16px;
+    }
+    .about__text p{
+        font-size: 16px;
+        line-height: 26px;
     }
     .soup__content>p{
         font-size: 16px;
@@ -110,7 +116,11 @@
     }
     .category__info h6{
         font-size: 16px;
-
+    }
+    .blog__bottom p{
+        font-size: 16px;
+        line-height: 26px;
+    }
 }
 @media screen and (max-width:480px) {
     header{
@@ -127,6 +137,7 @@
     .banner button{
         margin-top: 24px;
     }
+    
     
 }
 @media screen and (max-width:345px){
