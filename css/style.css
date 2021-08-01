@@ -15,6 +15,29 @@
     --border-color-light: #eee;
     --border-color-dark: rgba(255, 255, 255, 0.1);
 }
+@font-face {
+    font-family: "Segoe UI Bold";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: 'Segoe UI Semi Bold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Segoe UI Semibold'), local('SegoeUI-Semibold');
+}
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI'), local('SegoeUI');
+  }
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Segoe UI Italic'), local('SegoeUIItalic');
+}
 html, body{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -48,7 +71,7 @@ button.btn{
     font-weight: 700;
     margin-top: 48px;
     line-height: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Bold';
     transition: all .5s;
 }
 button span{
@@ -77,7 +100,7 @@ header nav{
     align-items: center;
 }
 header .nav__brand{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Bold';
     font-size: 36px;
     font-weight: 700;
     color: white;
@@ -162,8 +185,7 @@ header .nav__brand{
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI Semi Bold';
     transition: all .4s;
 }
 #navbar_menuContent li:hover a{
@@ -174,7 +196,7 @@ header .nav__brand{
     max-width: 600px;
     margin-top: 100px
 }
-header .banner h3{
+.banner h3{
     font-size: 54px;
     line-height: 64px;
     font-weight: 600;
@@ -230,12 +252,13 @@ header .banner h3{
     color: var(--secondary-color) ;
 }
 .book__footer a{
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI Bold';
     font-size: 20px;
     color: var(--heading-color);
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;
+    color: #fff;
 }
 .book .book__footer p{
     font-size: 18px;
@@ -293,6 +316,7 @@ header .banner h3{
 .category__info h6{
     font-size: 18px;
     color: var(--secondary-color);
+    font-weight: 600;
 }
 /* SOUP */
 .soup__content{
@@ -300,6 +324,10 @@ header .banner h3{
     border-radius: 8px;
     border: 1px solid var(--border-color-light);
     box-shadow: 0 25px 98px 0 rgb(0 0 0 / 3%);
+    transition: all .3s;
+}
+.soup__content:hover{
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
 }
 .soup__content:hover i{
     color: var(--body-bgcolor);
@@ -316,6 +344,9 @@ header .banner h3{
     border-radius: 8px;
     margin-right: 30px;
     transition: all .5s;
+}
+.soup__content__topRight p{
+    margin-bottom: 3px;
 }
 .soup__content__topRight a{
     font-size: 24px;
@@ -395,7 +426,7 @@ header .banner h3{
     border-radius: 50%;
 }
 .stats__item h4{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Semi Bold';
     font-size: 42px;
     font-weight: 600;
 }
@@ -407,7 +438,7 @@ header .banner h3{
 .video__thumbnail{
     background: url(../img/banner3.jpg) no-repeat center;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background-size: cover;
     position: relative;
     display: grid;
@@ -418,7 +449,7 @@ header .banner h3{
     content: "";
     background: rgb(16 15 19 / 60%);
     width: 100%;
-    height: 500px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -426,7 +457,8 @@ header .banner h3{
 }
 .video__thumbnail .play-view{
     position: absolute;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 4;
 }
 .video__playicon{
@@ -451,19 +483,38 @@ header .banner h3{
     color: #fff;
     transform: scale(1.2);
 }
-.my-mfp-zoom-in{
-    opacity: 0;
-    transition: all 0.2s ease-in-out;
-    transform: scale(0.8);
+#small-dialog{
+    max-width: 750px;
+    margin: 0 auto;
 }
-.my-mfp-zoom-in.mfp-ready #small-dialog {
+#small-dialog iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 420px;
+}
+#small-dialog .mfp-close{
+    color: #fff;
+    opacity: 1;
+    right: 0;
+    top: -40px;
+}
+
+.my-mfp-zoom-in #small-dialog{
+    transition: all .5s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+.my-mfp-zoom-in.mfp-ready #small-dialog{
     opacity: 1;
     transform: scale(1);
 }
-.my-mfp-zoom-in.mfp-removing{
+
+
+.my-mfp-zoom-in.mfp-removing #small-dialog{
     transform: scale(0.8);
     opacity: 0;
 }
+
 @keyframes ripple {
     0% {
       box-shadow: 0 0 0 0 rgb(255 255 255 / 25%), 0 0 0 10px rgb(255 255 255 / 25%), 0 0 0 20px rgb(255 255 255 / 25%);
@@ -513,8 +564,7 @@ header .banner h3{
 /* blog bottom */
 .blog__bottom a{
     text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;                                           
-    font-weight: 500;
+    font-family: 'Segoe UI Semi Bold', sans-serif;            
     color: var(--heading-color);
 }
 .blog__bottomHeader {
@@ -551,12 +601,12 @@ header .banner h3{
     border-radius: 50%;
 }
 .blog__info a{
-    font-weight: 700;
+    font-family: 'Segoe UI Bold';
     letter-spacing: .02em;
 }
 .blog__readmore a{
     opacity: 0.9;
-    font-weight: 700;
+    font-family: 'Segoe UI Bold';
     letter-spacing: .02em;
 }
 .blog__readmore{
@@ -571,7 +621,7 @@ header .banner h3{
 
 /* Say */
 .say__carousel .slick-dots li button:before{
-    font-size: 40px;
+    font-size: 12px;
 }
 body.darkMode .say__carousel .slick-dots li.slick-active button:before,
 .say__carousel .slick-dots li.slick-active button:before{
@@ -593,6 +643,7 @@ body.darkMode .say__carousel .slick-dots li.slick-active button:before,
     font-size: 50px;
     color: var(--primary-color);
     font-weight: 700;
+    font-family: initial;
     font-style: italic;
     line-height: 20px;
     padding-top: 30px;
@@ -608,9 +659,9 @@ body.darkMode .say__carousel .slick-dots li.slick-active button:before,
 .say__item h4{
     font-size: 24px;
     line-height: 36px;
+    font-family: 'Segoe UI Italic';
     font-weight: 600;
-    font-style: italic;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
 }
 .say__item h5{
     font-size: 20px;
@@ -711,6 +762,9 @@ footer{
     display: inline-block;
     margin-left: 15px;
 }
+.footer__bottom .footer__bottomLeft__text{
+    color: #ddd;
+}
 /* Button Back to Top */
 #myBtn {
     display: none;
@@ -770,6 +824,16 @@ body.darkMode .stats__item{
 body.darkMode .stats__item h4{
     color: white;
 }
+
+body.darkMode .video{
+    background-color: var(--background-dark);
+}
+body.darkMode .blog{
+    background-color: #282828;
+}
+body.darkMode .blog__bottom a{
+    color: var(--heading-color-dark);
+}
 body.darkMode .say{
     background-color: var(--background-dark);
 }
@@ -787,3 +851,4 @@ body.darkMode .footer__listIcon i{
 body.darkMode .footer__top input[type="email"]{
     background-color: var(--background-dark);
 }
+
