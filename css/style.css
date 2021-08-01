@@ -15,6 +15,29 @@
     --border-color-light: #eee;
     --border-color-dark: rgba(255, 255, 255, 0.1);
 }
+@font-face {
+    font-family: "Segoe UI Bold";
+    font-weight: 700;
+    src: local("Segoe UI Bold");
+}
+@font-face {
+    font-family: 'Segoe UI Semi Bold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Segoe UI Semibold'), local('SegoeUI-Semibold');
+}
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Segoe UI'), local('SegoeUI');
+  }
+@font-face {
+    font-family: 'Segoe UI Italic';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Segoe UI Italic'), local('SegoeUIItalic');
+}
 html, body{
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -31,6 +54,7 @@ p{
     line-height: 30px;
     color: var(--primary-color);
     font-family: 'Pacifico', cursive;
+    margin-bottom: 0;
 }
 .title h3{
     font-size: 38px;
@@ -47,7 +71,7 @@ button.btn{
     font-weight: 700;
     margin-top: 48px;
     line-height: 30px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Bold';
     transition: all .5s;
 }
 button span{
@@ -76,7 +100,7 @@ header nav{
     align-items: center;
 }
 header .nav__brand{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Bold';
     font-size: 36px;
     font-weight: 700;
     color: white;
@@ -161,8 +185,7 @@ header .nav__brand{
     text-decoration: none;
     color: white;
     font-size: 20px;
-    font-weight: 600;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Segoe UI Semi Bold';
     transition: all .4s;
 }
 #navbar_menuContent li:hover a{
@@ -211,7 +234,7 @@ header .nav__brand{
     left: 0;
     position: absolute;
 }
-.book__text p{
+.book .book__text p{
     color: #ffdfc9;
     font-size: 18px;
 }
@@ -229,14 +252,15 @@ header .nav__brand{
     color: var(--secondary-color) ;
 }
 .book__footer a{
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI Bold';
     font-size: 20px;
     color: var(--heading-color);
     font-weight: 700;
     line-height: 1.2;
     text-decoration: none;
+    color: #fff;
 }
-.book__footer p{
+.book .book__footer p{
     font-size: 18px;
     line-height: 28px;
     color: #ffdfc9;
@@ -292,6 +316,7 @@ header .nav__brand{
 .category__info h6{
     font-size: 18px;
     color: var(--secondary-color);
+    font-weight: 600;
 }
 /* SOUP */
 .soup__content{
@@ -299,6 +324,10 @@ header .nav__brand{
     border-radius: 8px;
     border: 1px solid var(--border-color-light);
     box-shadow: 0 25px 98px 0 rgb(0 0 0 / 3%);
+    transition: all .3s;
+}
+.soup__content:hover{
+    box-shadow: 0 25px 98px 0 rgb(0 0 0 / 10%);
 }
 .soup__content:hover i{
     color: var(--body-bgcolor);
@@ -315,6 +344,9 @@ header .nav__brand{
     border-radius: 8px;
     margin-right: 30px;
     transition: all .5s;
+}
+.soup__content__topRight p{
+    margin-bottom: 3px;
 }
 .soup__content__topRight a{
     font-size: 24px;
@@ -377,6 +409,7 @@ header .nav__brand{
     box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
     padding: 40px 20px;
     transition: all .4s;
+    height: 100%;
 }
 .stats__item:hover{
     transform: translateY(-10px);
@@ -393,7 +426,7 @@ header .nav__brand{
     border-radius: 50%;
 }
 .stats__item h4{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI Semi Bold';
     font-size: 42px;
     font-weight: 600;
 }
@@ -405,7 +438,7 @@ header .nav__brand{
 .video__thumbnail{
     background: url(../img/banner3.jpg) no-repeat center;
     width: 100%;
-    height: 500px;
+    min-height: 500px;
     background-size: cover;
     position: relative;
     display: grid;
@@ -416,25 +449,26 @@ header .nav__brand{
     content: "";
     background: rgb(16 15 19 / 60%);
     width: 100%;
-    height: 500px;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     border-radius: 5px;
 }
 .video__thumbnail .play-view{
-    left: 0;
-    right: 0;
-    top: -40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
 }
 .video__playicon{
     display: inline-block;
     width: 80px;
     height: 80px;
+    line-height: 80px;
     font-size: 26px;
     padding-left: 2px;
     text-align: center;
-    line-height: 76px;
     border-radius: 50%;
     transition: 0.3s ease-in-out;
     animation: ripple 1s linear infinite;
@@ -447,7 +481,40 @@ header .nav__brand{
 .video__playicon:hover{
     background:var(--primary-color);
     color: #fff;
+    transform: scale(1.2);
 }
+#small-dialog{
+    max-width: 750px;
+    margin: 0 auto;
+}
+#small-dialog iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 420px;
+}
+#small-dialog .mfp-close{
+    color: #fff;
+    opacity: 1;
+    right: 0;
+    top: -40px;
+}
+
+.my-mfp-zoom-in #small-dialog{
+    transition: all .5s;
+    transform: scale(0.8);
+    opacity: 0;
+}
+.my-mfp-zoom-in.mfp-ready #small-dialog{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+.my-mfp-zoom-in.mfp-removing #small-dialog{
+    transform: scale(0.8);
+    opacity: 0;
+}
+
 @keyframes ripple {
     0% {
       box-shadow: 0 0 0 0 rgb(255 255 255 / 25%), 0 0 0 10px rgb(255 255 255 / 25%), 0 0 0 20px rgb(255 255 255 / 25%);
@@ -497,8 +564,7 @@ header .nav__brand{
 /* blog bottom */
 .blog__bottom a{
     text-decoration: none;
-    font-family: 'Segoe UI', sans-serif;                                           
-    font-weight: 500;
+    font-family: 'Segoe UI Semi Bold', sans-serif;            
     color: var(--heading-color);
 }
 .blog__bottomHeader {
@@ -535,12 +601,12 @@ header .nav__brand{
     border-radius: 50%;
 }
 .blog__info a{
-    font-weight: 700;
+    font-family: 'Segoe UI Bold';
     letter-spacing: .02em;
 }
 .blog__readmore a{
     opacity: 0.9;
-    font-weight: 700;
+    font-family: 'Segoe UI Bold';
     letter-spacing: .02em;
 }
 .blog__readmore{
@@ -555,7 +621,7 @@ header .nav__brand{
 
 /* Say */
 .say__carousel .slick-dots li button:before{
-    font-size: 40px;
+    font-size: 12px;
 }
 body.darkMode .say__carousel .slick-dots li.slick-active button:before,
 .say__carousel .slick-dots li.slick-active button:before{
@@ -577,6 +643,7 @@ body.darkMode .say__carousel .slick-dots li.slick-active button:before,
     font-size: 50px;
     color: var(--primary-color);
     font-weight: 700;
+    font-family: initial;
     font-style: italic;
     line-height: 20px;
     padding-top: 30px;
@@ -592,9 +659,9 @@ body.darkMode .say__carousel .slick-dots li.slick-active button:before,
 .say__item h4{
     font-size: 24px;
     line-height: 36px;
+    font-family: 'Segoe UI Italic';
     font-weight: 600;
-    font-style: italic;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
 }
 .say__item h5{
     font-size: 20px;
@@ -695,6 +762,9 @@ footer{
     display: inline-block;
     margin-left: 15px;
 }
+.footer__bottom .footer__bottomLeft__text{
+    color: #ddd;
+}
 /* Button Back to Top */
 #myBtn {
     display: none;
@@ -733,11 +803,17 @@ body.darkMode .about{
 body.darkMode .title h3{
     color: var(--heading-color-dark);
 }
+body.darkMode .category{
+    background-color: #282828;
+}
 body.darkMode .soup{
     background-color: var(--background-dark);
 }
 body.darkMode .soup__content{
     border: 1px solid var(--border-color-dark);
+}
+body.darkMode .soup__content__topRight a{
+    color: #eee;
 }
 body.darkMode .stats{
     background-color: var(--background-dark);
@@ -747,6 +823,16 @@ body.darkMode .stats__item{
 }
 body.darkMode .stats__item h4{
     color: white;
+}
+
+body.darkMode .video{
+    background-color: var(--background-dark);
+}
+body.darkMode .blog{
+    background-color: #282828;
+}
+body.darkMode .blog__bottom a{
+    color: var(--heading-color-dark);
 }
 body.darkMode .say{
     background-color: var(--background-dark);
@@ -765,3 +851,4 @@ body.darkMode .footer__listIcon i{
 body.darkMode .footer__top input[type="email"]{
     background-color: var(--background-dark);
 }
+

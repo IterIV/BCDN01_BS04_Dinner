@@ -49,7 +49,20 @@
     .footer__bottom ul{
         text-align: center;
     }
+    .video__thumbnail{
+        min-height: 400px;
+    }
+    .blog__bottomHeader{
+        line-height: 30px;
+    }
 }
+
+@media screen and (max-width:824px) {
+    #navbar_menuContent li{
+        padding: 5px 0px;
+    }
+}
+
 @media screen and (max-width:800px) {
     header{
         margin-top: 60px;
@@ -60,6 +73,11 @@
         line-height: 50px;
     }
 }
+@media screen and (max-width:767px) {
+    #navbar_menuContent li a{
+        font-size: 16px;
+    }
+}
 @media screen and (max-width:736px) {
     .delicious h3{
         font-size: 35px;
@@ -68,7 +86,17 @@
     .blog__bottomHeader{
         font-size: 20px;
     }
+    #small-dialog .mfp-close{
+        top:-calc(56.25vw);
+    }
 }
+
+@media screen and (max-width:640px) {
+    .video__thumbnail{
+        min-height: 350px;
+    }
+}
+
 @media screen and (max-width:600px) {
     .nav__search{
         display: none;
@@ -79,6 +107,9 @@
     .about__text p{
         font-size: 16px;
         line-height: 26px;
+    }
+    .book .book__footer p{
+        font-size: 16px;
     }
     .soup__content>p{
         font-size: 16px;
@@ -96,6 +127,13 @@
      }
     .say__item p:nth-of-type(2){
         font-size: 16px;
+    }
+    .book .book__text p{
+        font-size: 16px;
+    }
+    .stats__item p{
+        font-size: 16px;
+        line-height: 26px;
     }
 }
 @media screen and (max-width:576px) {
@@ -135,16 +173,41 @@
         line-height: 38px;
     }
     .banner button{
-        margin-top: 24px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+    }
+
+    .title h3{
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .stats__item p{
+        font-size: 14px;
+    }
+    .say__item h4{
+        font-size: 20px;
+        line-height: 30px;
     }
     
-    
 }
-@media screen and (max-width:345px){
+@media screen and (max-width:375px){
     .banner{
         margin-top: 0;
     }
     .banner button{
         margin-top: 20px;
+    }
+    .title h3{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .title h6{
+        font-size: 16px;
+    }
+    .video__thumbnail{
+        min-height: 300px;
+    }
+    .footer__bottom ul li{
+        margin-left: 8px;
     }
 }
